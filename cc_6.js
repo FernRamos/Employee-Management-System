@@ -76,3 +76,15 @@ class Company {
     this.employees.forEach(emp => console.log("• " + emp.describe()));
   }
 }
+/************************************
+ * Step 6: Instantiate & Display    *
+ ************************************/
+const myCompany = new Company("TechNova");
+
+myCompany.addEmployee(emp1);   // Liam Carter
+myCompany.addEmployee(emp2);   // Sofia Perez
+myCompany.addEmployee(emp3);   // Noah Kim
+myCompany.addEmployee(mgr1);   // Ava Thompson
+myCompany.addEmployee(mgr2);   // Ethan Chen
+
+myCompany.listEmployees();
