@@ -53,3 +53,26 @@ const mgr2 = new Manager("Ethan Chen", "Engineering", [emp3]);
 // Assign direct reports to managers
 mgr1.addReport(emp1);
 mgr1.addReport(emp2);
+
+/****************************
+ * Step 5: Company Class    *
+ ****************************/
+class Company {
+  constructor(name) {
+    this.name = name;
+    this.employees = []; // Array of Employee or Manager
+  }
+
+  addEmployee(employee) {
+    if (employee instanceof Employee) {
+      this.employees.push(employee);
+    } else {
+      console.warn("addEmployee expects an Employee or Manager.");
+    }
+  }
+
+  listEmployees() {
+    console.log(`\n Employee list for ${this.name}:`);
+    this.employees.forEach(emp => console.log("• " + emp.describe()));
+  }
+}
