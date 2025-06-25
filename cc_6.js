@@ -15,18 +15,13 @@ class Employee {
     return `${this.name} works in the ${this.department} department.`;
   }
 }
-/****************
- * Sub-class    *
- ****************/
+/****************************************
+ * Step 3: Manager Class (sub-class)    *
+ ****************************************/
 class Manager extends Employee {
-  /**
-   * @param {string} name
-   * @param {string} department
-   * @param {Employee[]} [reports] – optional starting list of direct reports
-   */
   constructor(name, department, reports = []) {
-    super(name, department);          // call Employee constructor
-    this.reports = reports;           // an array of Employee objects
+    super(name, department);          // Inherit name and department
+    this.reports = reports;           // Array of Employee instances
   }
 
   /** Add a direct report to the manager */
