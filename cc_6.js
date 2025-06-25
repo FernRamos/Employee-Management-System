@@ -8,8 +8,7 @@ class Employee {
     this.name = name;
     this.department = department;
   }
-
-  /**
+  
   /** Return a simple sentence describing the employee */
   describe() {
     return `${this.name} works in the ${this.department} department.`;
