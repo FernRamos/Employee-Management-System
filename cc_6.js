@@ -39,3 +39,17 @@ class Manager extends Employee {
     return `${base} They manage ${count} direct report${count === 1 ? "" : "s"}.`;
   }
 }
+
+/*****************************
+ * Step 4: Create Instances  *
+ *****************************/
+const emp1 = new Employee("Liam Carter", "Finance");
+const emp2 = new Employee("Sofia Perez", "Marketing");
+const emp3 = new Employee("Noah Kim", "Engineering");
+
+const mgr1 = new Manager("Ava Thompson", "Finance");
+const mgr2 = new Manager("Ethan Chen", "Engineering", [emp3]);
+
+// Assign direct reports to managers
+mgr1.addReport(emp1);
+mgr1.addReport(emp2);
