@@ -8,7 +8,7 @@ class Employee {
     this.name = name;
     this.department = department;
   }
-  
+
   /** Return a simple sentence describing the employee */
   describe() {
     return `${this.name} works in the ${this.department} department.`;
@@ -69,12 +69,27 @@ class Company {
       console.warn("addEmployee expects an Employee or Manager.");
     }
   }
-
+   /** Attempting to see the results in the browser console as well***/
   listEmployees() {
+    const outputDiv = document.getElementById("employee-output");
+
     console.log(`\n Employee list for ${this.name}:`);
-    this.employees.forEach(emp => console.log("• " + emp.describe()));
+    outputDiv.innerHTML = `<h2> Employee list for ${this.name}:</h2>`;
+
+    this.employees.forEach(emp => {
+      const description = emp.describe();
+
+      // Output to browser console
+      console.log("• " + description);
+
+      // Output to HTML page
+      const p = document.createElement("p");
+      p.textContent = "• " + description;
+      outputDiv.appendChild(p);
+    });
   }
 }
+
 /************************************
  * Step 6: Instantiate & Display    *
  ************************************/
