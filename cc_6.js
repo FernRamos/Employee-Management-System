@@ -93,7 +93,7 @@ class Company {
 /************************************
  * Step 6: Instantiate & Display    *
  ************************************/
-const myCompany = new Company("TechNova");
+const myCompany = new Company("USF Tech");
 
 myCompany.addEmployee(emp1);   // Liam Carter
 myCompany.addEmployee(emp2);   // Sofia Perez
